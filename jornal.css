@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*cabeçalho do site*/
+header
+{
+    background-color: darkblue;
+    color: white;
+    height: 80px;
+}
+
+header h1
+{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    gap: 300px;
+
+    font-size: 20px;
+    color: white;
+
+}
+
+.container img
+{
+    border-radius: 15px;
+    margin: 120px;
+    width: 600px;
+    height: auto;
+}
+
+.container p
+{
+    margin: 0;
+    font-size: 16px;
+}
+
+.galeria
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+
+/* itens da galeria de 3 imagens*/
+.item
+{
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+}
+
+/*altera fonte h2 do item*/
+.item h2
+{
+    font-size: 30px;
+    text-align: center;
+    margin-left: 110px;
+}
+
+/*altera fonte p do item*/
+.item p
+{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 130px;
+}
+
+.item img
+{
+    margin: 30px;
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/*altera item 2 da galeria*/
+.item2 img
+{
+    margin: 60px;
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.item2 h2
+{
+    font-size: 30px;
+}
+
+.item2 p
+{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*textos e títulos*/
+.item h2
+{
+    margin-top: 10px;
+}
+
+h2
+{
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.texto
+{
+    font-size: 30px;
+    max-width: 500px;
+    line-height: 1.6;
+}
