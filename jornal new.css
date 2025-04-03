@@ -53,57 +53,54 @@ strong
 
 .texto
 {
-    font-size: 17px;
+    font-size: 17x;
     max-width: 600px;
     line-height: 1.6
 }
 
+/*sessão 02*/
 .galeria
 {
     display: flex;
     justify-content: space-between;
-    gap: 20px
+    margin: 40px;
 }
 
 /* itens da galeria de 3 imagens*/
 .item
 {
-    padding: 30px;
+    padding: 40px;
     flex: 1;
-    text-align: center;
+    text-align: left;
+    display: inline-block;
+    
+    text-align: left;
+    max-width: 500px;
 }
 
-/*altera fonte h2 do item*/
 .item h2
 {
-    font-size: 30px;
-    text-align: center;
-    margin-left: 110px;
-}
-
-/*altera fonte p do item*/
-.item p
-{
-    font-size: 20px;
-    text-align: center;
-    margin-left: 130px;
+    color: darkblue;
 }
 
 .item img
 {
     margin: 30px;
-    width: 70%;
+    width: 80%;
     height: auto;
     border-radius: 15px;
+    display: block;
 }
 
-/*altera item 2 da galeria*/
+/*item2 da galeria*/
 .item2 img
 {
-    margin: 60px;
+    margin: 10px;
+    margin-top: 70px;
     width: 50%;
     height: auto;
     border-radius: 15px;
+    text-align: left;
 }
 
 .item2 h2
@@ -114,20 +111,14 @@ strong
 .item2 p
 {
     font-size: 20px;
-    text-align: center;
 }
-
 
 /*textos e títulos*/
-.item h2
-{
-    margin-top: 10px;
-}
 
 h2
 {
     text-align: left;
     margin-top: 40px;
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 30x;
 }
