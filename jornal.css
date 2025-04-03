@@ -7,16 +7,18 @@
 /*cabeçalho do site*/
 header
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background-color: darkblue;
     color: white;
-    height: 80px;
+    padding: 10px 20px;
 }
 
 header h1
 {
-    font-size: 50px;
-    text-align: center;
-    padding-top: 5px;
+    font-size: 60px;
 }
 
 /*sessão 01*/
@@ -26,7 +28,7 @@ header h1
     align-items: center;
     gap: 50px;
 
-    font-size: 20px;
+    font-size: 18px;
     color: black;
 }
 
@@ -44,18 +46,17 @@ header h1
     color: darkblue;
     font-size: 35px;
     max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.texto p
+{
+    max-width: 550px;
 }
 
 strong
 {
     color: darkblue;
-}
-
-.texto
-{
-    font-size: 17x;
-    max-width: 600px;
-    line-height: 1.6
 }
 
 /*sessão 02*/
@@ -76,6 +77,8 @@ strong
     
     text-align: left;
     max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .item h2
@@ -93,32 +96,108 @@ strong
 }
 
 /*item2 da galeria*/
+.item2
+{
+    text-align: left;
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 .item2 img
 {
-    margin: 10px;
+    margin: 0px;
     margin-top: 70px;
-    width: 50%;
+    width: 60%;
     height: auto;
     border-radius: 15px;
-    text-align: left;
 }
 
 .item2 h2
 {
-    font-size: 30px;
+    color: darkblue;
 }
 
-.item2 p
+
+/*MENU*/
+
+/*Posicionamento do menu*/
+.menu
 {
-    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
 }
 
-/*textos e títulos*/
-
-h2
+.menu ul
 {
-    text-align: left;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 30x;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: darkblue;
+    border-radius: 5px;
 }
+
+.menu ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul li a:hover
+{
+    background-color: white;
+    color: darkblue;
+    border-radius: 5px;
+}
+
+/*Estilo do menu hamburguer*/
+.menu ul.active
+{
+    display: flex;
+}
+
+.menu-toggle
+{
+    display: block;
+    cursor: pointer;
+}
+
+
+/*Personalização interna do menu*/
+.menu-itens li a 
+{
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.menu-itens
+{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: darkblue;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    border-radius: 5px;
+    min-width: 200px;
+    z-index: 100;
+}
+
+.menu-toggle-checkbox:checked ~ .menu-itens
+{
+    display: flex;
+}
+
+.menu-toggle-checkbox
+{
+    display: none;
+}
+
