@@ -10,34 +10,45 @@
 
 <body>
     <header>
-        <h1>FOLHA DO FUT</h1>
 
-        <!--MENU-->
-        <nav class="menu">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox"/>
-            <label for="menu-toggle" class="menu-toggle">
-                <img src="hamburguer.png" alt="menu-icon">
+        <h1>FOLHA DO FUT</h1>
+        
+        <div class="menu-hamburguer">
+            <!-- Checkbox -> checado = menu aberto, senão = menu fechado -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+              <div class="linha"></div>
+              <div class="linha"></div>
+              <div class="linha"></div>
             </label>
-            <ul class="menu-itens">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#principais materias">Principais Matérias</a></li>
-                <li><a href="#fale conosco">Fale conosco</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
+
+            <div class="overlay">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Mais informações</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
     </header>
     
     
     <!--PRIMEIRA MATÉRIA-->
-    <div class="container">
-        <a href="https://as.com/futbol/internacional/neymar-pone-picante-al-brasileirao-n/?utm_source=chatgpt.com">
-            <img src="https://macmagazine.com.br/wp-content/uploads/2014/06/06-selecao-brasileira-900x506.jpg" alt="IMAGEM SELEÇÃO BRASILEIRA 2014">
-        </a>
-        <div class="texto">
-            <h2>Craque Neymar retorna ao futebol brasileiro</h2>
-            <p>O Campeonato Brasileiro de 2025 promete ser um dos mais disputados dos últimos anos, com a volta de estrelas como Neymar e Memphis Depay. Palmeiras e Flamengo despontam como favoritos ao título, investindo pesado em reforços de peso. <strong>Outros clubes, como Internacional, São Paulo e Corinthians, também montaram elencos fortes,</strong>enquanto Cruzeiro e Fluminense buscam surpreender com suas novas contratações.</p>
-        </div>    
-    </div>
+    <section>
+        <div class="container">
+            <a href="https://as.com/futbol/internacional/neymar-pone-picante-al-brasileirao-n/?utm_source=chatgpt.com">
+                <img src="https://macmagazine.com.br/wp-content/uploads/2014/06/06-selecao-brasileira-900x506.jpg" alt="IMAGEM SELEÇÃO BRASILEIRA 2014">
+            </a>
+            <div class="texto">
+                <h2>Craque Neymar retorna ao futebol brasileiro</h2>
+                <p>O Campeonato Brasileiro de 2025 promete ser um dos mais disputados dos últimos anos, com a volta de estrelas como Neymar e Memphis Depay. Palmeiras e Flamengo despontam como favoritos ao título, investindo pesado em reforços de peso. <strong>Outros clubes, como Internacional, São Paulo e Corinthians, também montaram elencos fortes,</strong>enquanto Cruzeiro e Fluminense buscam surpreender com suas novas contratações.</p>
+            </div>    
+        </div>
+    </section>
 
     <section class="galeria">
 
@@ -65,9 +76,6 @@
 
     </section>
 
-    <footer>
-
-    </footer>
 </body>
 
 </html>
