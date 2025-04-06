@@ -1,24 +1,130 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-/*cabeçalho do site*/
+/* Cabeçalho */
 header
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     background-color: darkblue;
-    color: white;
-    padding: 10px 20px;
+    padding: 5px;
 }
 
 header h1
 {
+    align-items: center;
+    text-align: center;
     font-size: 60px;
+    margin-top: 10px;
+    color: white;
+}
+
+.menu-hamburguer
+{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 4;
+}
+
+#menu-toggle
+{
+    display: none;
+}
+
+.menu-icon
+{
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+}
+
+.linha
+{
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Estilo do menu dos itens */
+.menu
+{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    align-items: center;
+}
+
+.menu ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu ul li
+{
+    margin: 20px 0;
+}
+
+.menu a 
+{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover
+{
+    background-color: white;
+    color: darkblue;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Estilo do menu overlay */
+.overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+/* Animação */
+#menu-toggle:checked + .menu-icon .linha:nth-child(1)
+{
+    transform: rotate(45deg) translate(13px, 13px);
+}
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(2)
+{
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(3)
+{
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#menu-toggle:checked ~ .overlay
+{
+    transform: scale(1)
 }
 
 /*sessão 01*/
@@ -118,86 +224,4 @@ strong
     color: darkblue;
 }
 
-
-/*MENU*/
-
-/*Posicionamento do menu*/
-.menu
-{
-    position: absolute;
-    left: 20px;
-    top: 30px;
-}
-
-.menu ul
-{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    background-color: darkblue;
-    border-radius: 5px;
-}
-
-.menu ul li a
-{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.menu ul li a:hover
-{
-    background-color: white;
-    color: darkblue;
-    border-radius: 5px;
-}
-
-/*Estilo do menu hamburguer*/
-.menu ul.active
-{
-    display: flex;
-}
-
-.menu-toggle
-{
-    display: block;
-    cursor: pointer;
-}
-
-
-/*Personalização interna do menu*/
-.menu-itens li a 
-{
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    display: block;
-}
-
-.menu-itens
-{
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: darkblue;
-    padding: 10px;
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    border-radius: 5px;
-    min-width: 200px;
-    z-index: 100;
-}
-
-.menu-toggle-checkbox:checked ~ .menu-itens
-{
-    display: flex;
-}
-
-.menu-toggle-checkbox
-{
-    display: none;
-}
 
