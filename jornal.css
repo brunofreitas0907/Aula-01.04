@@ -9,6 +9,7 @@ header
 {
     background-color: darkblue;
     padding: 5px;
+    width: 100%;
 }
 
 header h1
@@ -96,9 +97,9 @@ header h1
 /* Estilo do menu overlay */
 .menu-completo
 {
-    position: fixed;
-    top:60px;
-    left:0px;
+    position: absolute;
+    top:30px;
+    left:-50px;
     width: 250px;
     height: 240px;
     background-color: rgba(0, 0, 139);
